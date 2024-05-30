@@ -17,7 +17,7 @@ This repository contains the Docker Compose setup to quickly deploy a PostgreSQL
 ## Getting Started
 
 ###  Steps to Run
-- docker-compose up -d
+- docker compose up -d
 - Access pgAdmin at [http://localhost:8120](http://localhost:8120) with the email `admin@admin.com` and password `admin`.
 
 ## Volumes
@@ -29,6 +29,6 @@ This repository contains the Docker Compose setup to quickly deploy a PostgreSQL
 - Modify the environment variables in the `docker-compose.yml` file as needed for your setup.
 
 ## Stopping the Services
-- docker-compose down
+- docker compose down
 
 
