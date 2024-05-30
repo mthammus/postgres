@@ -22,8 +22,8 @@ This repository contains the Docker Compose setup to quickly deploy a PostgreSQL
 - Access pgAdmin at [http://localhost:8120](http://localhost:8120) with the email `admin@admin.com` and password `admin`.
 
 ## Volumes
-- PostgreSQL data is persisted in the `./postgres_data` directory on the host machine.
-- pgAdmin data is persisted in the `./pgadmin_data` directory on the host machine.
+- PostgreSQL data is persisted in the `./postgres_data` directory on the host machine. This will be the sub folder in your postgres folder.
+- pgAdmin data is persisted in the `./pgadmin_data` directory on the host machine. This will be the sub folder in your postgres folder.
 
 ## Notes
 - Ensure the IP addresses `192.168.1.29` and `192.168.1.30` are available on your network.
