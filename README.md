@@ -1,12 +1,11 @@
 
-# F&B Data Platform
+# Postgres
 
 This repository contains the Docker Compose setup to quickly deploy a PostgreSQL database along with pgAdmin for database management.
 
 ### Prerequisites (Assuming Docker and Docker Compose is installed in the system)
 - Docker
 - Docker Compose
-
 
 ## Services
 - Download the docker-compose.yml file to the local folder
