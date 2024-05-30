@@ -4,7 +4,6 @@
 This repository contains the Docker Compose setup to quickly deploy a PostgreSQL database along with pgAdmin for database management.
 
 ## Services
-
 ### 1. PostgreSQL
 - **Image**: `postgres:latest`
 - **Host**: `192.168.1.30`
@@ -39,16 +38,7 @@ Both services are connected to the `fnb` network with the following subnet: `192
 - Docker Compose
 
 ### Steps to Run
-1. Clone the repository:
-   \`\`\`bash
-   git clone <repository-url>
-   cd <repository-directory>
-   \`\`\`
-
-2. Start the services:
-   \`\`\`bash
-   docker-compose up -d
-   \`\`\`
+docker-compose up -d
 
 3. Access pgAdmin at [http://localhost:8120](http://localhost:8120) with the email `admin@admin.com` and password `admin`.
 
@@ -61,8 +51,6 @@ Both services are connected to the `fnb` network with the following subnet: `192
 - Modify the environment variables in the `docker-compose.yml` file as needed for your setup.
 
 ## Stopping the Services
-To stop and remove all the containers, run:
-\`\`\`bash
 docker-compose down
-\`\`\`
+
 
