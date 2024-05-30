@@ -10,7 +10,7 @@ This repository contains the Docker Compose setup to quickly deploy a PostgreSQL
 
 ## Services
 - Download the docker-compose.yml file to the local folder
-- create a postgres folder and copy the file - docker-compose.yml to postgres folder
+- Create a postgres folder and copy the file - docker-compose.yml to postgres folder
 
 ## Network
 - Both services are connected to the `fnb` network with the following subnet: `192.168.1.0/24`.
