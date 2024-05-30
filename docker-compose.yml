@@ -1,0 +1,53 @@
+version: '4.9'
+services:
+
+# F&B Data Platform
+#This repository contains the Docker Compose setup to quickly deploy a PostgreSQL database along with pgAdmin for database management.
+
+#List of Services
+# 1. postgres                - 192.168.1.30
+# 2. pgadmin                 - 192.168.1.29   
+
+# Postgres
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    hostname: postgres
+    environment:
+      POSTGRES_DB: fnb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    ports:
+     - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    networks:
+      terces:
+        ipv4_address: 192.168.1.30
+
+
+  #pgadmin:
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    hostname: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_PORT: 8120
+    ports:
+      - "8120:8120"
+    depends_on:
+      - postgres
+    volumes:
+      - ./pgadmin_data:/var/lib/pgadmin
+    networks:
+      terces:
+        ipv4_address: 192.168.1.29
+
+networks:
+  terces:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24
