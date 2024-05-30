@@ -18,8 +18,8 @@ This repository contains the Docker Compose setup to quickly deploy a PostgreSQL
 ## Getting Started
 
 ###  Steps to Run
--docker-compose up -d
--Access pgAdmin at [http://localhost:8120](http://localhost:8120) with the email `admin@admin.com` and password `admin`.
+- docker-compose up -d
+- Access pgAdmin at [http://localhost:8120](http://localhost:8120) with the email `admin@admin.com` and password `admin`.
 
 ## Volumes
 - PostgreSQL data is persisted in the `./postgres_data` directory on the host machine.
